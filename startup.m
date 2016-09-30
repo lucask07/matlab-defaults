@@ -26,3 +26,26 @@ set(0, 'DefaultFigureColor', 'White', ...
 'DefaultTextFontName', 'Times', ...
 'DefaultTextVerticalAlignment', 'middle', ...
 'DefaultTextHorizontalAlignment', 'left');
+
+if ~isdeployed,
+    cd /users/lkoerner/Documents/WORK
+
+    addpath /users/lkoerner/Documents/WORK/MATLAB_TOOLS/
+    addpath /users/lkoerner/Documents/WORK/MATLAB_TOOLS/matlab-defaults
+    disp('Executed startup.m in Documents/WORK/MATLAB_TOOLS/matlab-defaults')
+    disp('Matlab starts up at / so there is a symbolic link at /startup.m that points to Documents/WORK/MATLAB_TOOLS/matlab-defaults/startup.m')
+
+    dbstop if error
+end
+    
+% run('/users/lkoerner/Documents/WORK/MATLAB_TOOLS/matlab-defaults/startup_custom.m');
+
+ 
+% reply = input('Initialize MESA CameraGroupTester Analysis? Y/N [N] \n', 's');
+% 
+% if strcmp(reply, 'Y')
+%     cd MESA/CameraGroupTester_Data/
+%     addpath CameraGroup_AnalysisCode/
+%     disp('Need to add-path of data-set to analyze')
+%     edit AnalyzeMesaProbes.m
+% end
